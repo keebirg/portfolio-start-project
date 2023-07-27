@@ -8,7 +8,7 @@ export const Header = () => {
         <div>
             <StyledHeader>
                 <Logo/>
-                <Menu/>git status
+                <Menu/>
             </StyledHeader>
         </div>
     )

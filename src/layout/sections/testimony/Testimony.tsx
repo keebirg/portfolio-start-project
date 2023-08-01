@@ -9,7 +9,7 @@ export const Testimony = () => {
     return (
         <StyledTestimony>
             <SectionTitle>Testimony</SectionTitle>
-            <FlexWrapper justify={"column"} align={"center"}>
+            <FlexWrapper direction={"column"} align={"center"}>
                 <Icon iconId={"quote"}/>
                 <Slider/>
             </FlexWrapper>
@@ -20,5 +20,5 @@ export const Testimony = () => {
 
 const StyledTestimony = styled.section`
   background-color: aqua;
-  min-height: 100vh;
+  min-height: 50vh;
 `

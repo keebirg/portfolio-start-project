@@ -23,7 +23,7 @@ export const Skill = (props: SkillPropsType) => {
     );
 };
 
-const IconWrapper = styled.div`
+export const IconWrapper = styled.div`
   position: relative;
 
   &::before {

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../../../components/icon/Icon";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {theme} from "../../../../styles/Theme";
 
 type SkillPropsType = {
     iconId: string,
@@ -38,6 +39,8 @@ export const IconWrapper = styled.div`
     left: 50%;  
     top: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
+    
+    
   }
 `
 
@@ -52,7 +55,12 @@ const SkillText = styled.p`
 `
 
 const StyledSkill = styled.div`
-  width: 380px;
+  width: 330px;
   padding: 62px 20px 40px;
+  flex-grow: 1;
+  
+  @media ${theme.media.mobile}{
+    padding: 62px 0 40px;
+  }
 `
 

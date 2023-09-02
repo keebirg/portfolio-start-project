@@ -5,11 +5,11 @@ import {theme} from "../../../styles/Theme";
 export const MobileMenu = (props: { itemsMenu: Array<string> }) => {
     return (
         <StyledMobileMenu>
-            <BurgerButton isOpen={true}>
+            <BurgerButton isOpen={false}>
                 <span> </span>
             </BurgerButton>
 
-            <MobileMenuPopup isOpen={true}>
+            <MobileMenuPopup isOpen={false}>
                 <ul>
                     {
                         props.itemsMenu.map((item: string, index: number) => {
@@ -109,6 +109,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       background-color: ${theme.colors.font};
       position: absolute;
       transform: translateY(10px);
+      right: 0;
 
       ${props => props.isOpen && css<{ isOpen: boolean }>`
         width: 36px;

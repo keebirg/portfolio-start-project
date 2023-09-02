@@ -17,21 +17,26 @@ export const Work = (props: WorkPropsType) => {
                 <StyledImg src={props.src}/>
                 <Button>view project</Button>
             </ImgWrapper>
+
             <Description>
                 <Title>{props.title}</Title>
                 <Text>{props.text}</Text>
                 <Link href={"#"}>demo</Link>
                 <Link href={"#"}>Code</Link>
             </Description>
-
         </StyledWork>
     );
 };
 
 const StyledWork = styled.div`
   background-color: ${theme.colors.secondaryBg};
-  max-width: 540px;
-  width: 100%;
+
+  width: 330px;
+  flex-grow: 1;
+
+  @media ${theme.media.desktop} {
+    max-width: 540px;
+  }
 
   ${Link} {
     padding: 10px 0;
@@ -46,36 +51,48 @@ const StyledWork = styled.div`
 const ImgWrapper = styled.div`
   position: relative;
 
-  &:hover {
-        
-    &::before {
-      content: "";
-      background: rgba(0, 0, 0, 0.30);
-      backdrop-filter: blur(4px);
 
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
-    }
+  &::before {
+    opacity: 0;
+    content: "";
+    background: rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(4px);
 
-    ${Button}{
-      opacity: 1;
-    }
-    
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
   }
-  
-  ${Button}{
+
+  ${Button} {
     opacity: 0;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    
-    &::before{
-      width: 100%;
-      height: 100%;
+  }
+
+  &:hover {
+    ${Button} {
+      opacity: 1;
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+  
+  @media ${theme.media.tablet}{
+    ${Button} {
+      opacity: 1;
+    }
+
+    &::before {
+      opacity: 1;
     }
   }
   

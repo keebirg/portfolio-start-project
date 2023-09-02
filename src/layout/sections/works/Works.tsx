@@ -8,7 +8,7 @@ import imgWork2 from "../../../assets/images/work_2.webp"
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Container} from "../../../components/Container";
 
-const itemsMenu = ["All", "landing page", "React", "spa"];
+const itemsMenu = ["All", "Landing page", "React", "spa"];
 
 export const Works = () => {
     return (
@@ -16,7 +16,7 @@ export const Works = () => {
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu itemsMenu={itemsMenu}/>
-                <FlexWrapper justify={"space-between"} align={"flex-start"}>
+                <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
                     <Work
                         src={imgWork1}
                         title={"Social Network"}
@@ -34,5 +34,7 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section` 
-
+  ${FlexWrapper}{
+    gap: 30px;
+  }
 `

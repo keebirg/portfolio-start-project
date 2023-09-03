@@ -16,9 +16,9 @@ export const Footer:React.FC = () => {
             <FlexWrapper direction={"column"} align={"center"}>
                 <S.Name>Mihail</S.Name>
                 <S.SocialList>
-                    {SocialItemData.map((t)=>{
+                    {SocialItemData.map((t, index)=>{
                         return(
-                            <S.SocialItem>
+                            <S.SocialItem key={index}>
                                 <S.SocialLink href={t.href}>
                                     <Icon width={"21"} height={"21"} viewBox={"0 0 21 21"} iconId={t.iconId}/>
                                 </S.SocialLink>

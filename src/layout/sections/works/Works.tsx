@@ -30,9 +30,9 @@ export const Works:React.FC = () => {
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu itemsMenu={itemsMenu}/>
                 <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
-                    {WorkData.map((t)=>{
+                    {WorkData.map((t, index)=>{
                         return(
-                            <Work
+                            <Work key={index}
                                 src={t.src}
                                 title={t.title}
                                 text={t.text}

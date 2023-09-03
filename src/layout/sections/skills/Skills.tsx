@@ -44,9 +44,9 @@ export const Skills: React.FC = () => {
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
-                    {SkillData.map((t) => {
+                    {SkillData.map((t, index) => {
                         return (
-                            <Skill
+                            <Skill key={index}
                                 iconId={t.iconId}
                                 text={t.text}
                                 title={t.title}

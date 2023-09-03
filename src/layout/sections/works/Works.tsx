@@ -9,24 +9,36 @@ import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Container} from "../../../components/Container";
 
 const itemsMenu = ["All", "Landing page", "React", "spa"];
+const WorkData=[
+    {
+        src:imgWork1,
+        title:"Social Network",
+        text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    },
+    {
+        src:imgWork2,
+        title:"Timer",
+        text:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    },
+]
 
-export const Works = () => {
+
+export const Works:React.FC = () => {
     return (
         <StyledWorks>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu itemsMenu={itemsMenu}/>
                 <FlexWrapper justify={"space-between"} align={"flex-start"} wrap={"wrap"}>
-                    <Work
-                        src={imgWork1}
-                        title={"Social Network"}
-                        text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
-                    />
-                    <Work
-                        src={imgWork2}
-                        title={"Timer"}
-                        text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit  ut labore et dolore magna aliqua Ut enim"}
-                    />
+                    {WorkData.map((t)=>{
+                        return(
+                            <Work
+                                src={t.src}
+                                title={t.title}
+                                text={t.text}
+                            />
+                        )
+                    })}
                 </FlexWrapper>
             </Container>
         </StyledWorks>

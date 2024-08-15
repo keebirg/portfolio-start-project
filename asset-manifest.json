@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/portfolio-start-project/static/css/main.31d6cfe0.css",
-    "main.js": "/portfolio-start-project/static/js/main.d65e0268.js",
+    "main.js": "/portfolio-start-project/static/js/main.e7039137.js",
     "static/js/787.25eaef86.chunk.js": "/portfolio-start-project/static/js/787.25eaef86.chunk.js",
-    "static/media/work_1.webp": "/portfolio-start-project/static/media/work_1.f4264469c0e20ce5f20d.webp",
     "static/media/my_photo.webp": "/portfolio-start-project/static/media/my_photo.7818b257592d3b9a0079.webp",
-    "static/media/work_2.webp": "/portfolio-start-project/static/media/work_2.e294a9180f3031d1b313.webp",
-    "static/media/icons-sprite.svg": "/portfolio-start-project/static/media/icons-sprite.8a6236163f6f0316b8ebfc0d49d33e85.svg",
+    "static/media/icons-sprite.svg": "/portfolio-start-project/static/media/icons-sprite.6e4a5777eeb9b113d5958108a93b1530.svg",
+    "static/media/realtor_test.png": "/portfolio-start-project/static/media/realtor_test.611cb142ceb6c404e90b.png",
+    "static/media/to_do_lists.png": "/portfolio-start-project/static/media/to_do_lists.cdcb4c0985da135849b0.png",
     "index.html": "/portfolio-start-project/index.html",
-    "main.d65e0268.js.map": "/portfolio-start-project/static/js/main.d65e0268.js.map",
+    "main.e7039137.js.map": "/portfolio-start-project/static/js/main.e7039137.js.map",
     "787.25eaef86.chunk.js.map": "/portfolio-start-project/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.d65e0268.js"
+    "static/js/main.e7039137.js"
   ]
 }

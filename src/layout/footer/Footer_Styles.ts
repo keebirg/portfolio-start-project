@@ -4,7 +4,7 @@ import {font} from "../../styles/Common";
 
 const StyledFooter = styled.footer`
   background-color: ${theme.colors.primaryBg};
-  padding: 40px 0;
+  padding: 30px 0;
 `
 
 const Name = styled.span`
@@ -31,6 +31,7 @@ const SocialItem = styled.li`
 `
 
 const SocialLink = styled.a`
+  
   width: 35px;
   height: 35px;
   border-radius: 25px;
@@ -39,9 +40,10 @@ const SocialLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+
   
   color: ${theme.colors.accent};
-  
+  transition: ${theme.animation.transition};
   
   &:hover{
     color: ${theme.colors.primaryBg};

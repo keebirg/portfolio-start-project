@@ -2,10 +2,10 @@ import React from 'react';
 import styled from "styled-components";
 import {Menu} from "../menu/Menu";
 
-export const DesktopMenu: React.FC<{itemsMenu: Array<string>}> = (props: { itemsMenu: Array<string> }) => {
+export const DesktopMenu: React.FC = () => {
     return (
         <StyledDesktopMenu>
-            <Menu itemsMenu={props.itemsMenu}/>
+            <Menu />
         </StyledDesktopMenu>
     );
 };

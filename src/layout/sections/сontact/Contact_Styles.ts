@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 
 const StyledContact = styled.section`
-
+  
 `
 
 const StyledForm = styled.form`

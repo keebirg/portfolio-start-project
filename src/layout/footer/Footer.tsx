@@ -4,10 +4,11 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {S} from "./Footer_Styles";
 
 const SocialItemData=[
-    {iconId: "instagram", href: "#"},
-    {iconId: "linkedin", href: "#"},
-    {iconId: "telegram", href: "#"},
-    {iconId: "vk", href: "#"},
+    // {iconId: "instagram", href: "#", disabled: true, viewBox:"0 0 21 21"},
+    // {iconId: "linkedin", href: "#", disabled: true, viewBox:"0 0 21 21"},
+    {iconId: "telegram", href: "https://t.me/Ilin_Mihail", disabled: false, viewBox:"0 0 21 21"},
+    {iconId: "vk", href: "https://vk.com/keebirg", disabled: false, viewBox:"0 0 21 21"},
+    {iconId: "github", href: "https://github.com/keebirg", disabled: true, viewBox:"2 2 20 20"},
 ]
 
 export const Footer:React.FC = () => {
@@ -19,14 +20,14 @@ export const Footer:React.FC = () => {
                     {SocialItemData.map((t, index)=>{
                         return(
                             <S.SocialItem key={index}>
-                                <S.SocialLink href={t.href}>
-                                    <Icon width={"21"} height={"21"} viewBox={"0 0 21 21"} iconId={t.iconId}/>
+                                <S.SocialLink onClick={(event)=>{t.disabled && event.preventDefault()}} href={t.href}>
+                                    <Icon width={"21"} height={"21"} viewBox={t.viewBox} iconId={t.iconId}/>
                                 </S.SocialLink>
                             </S.SocialItem>
                         )
                     })}
                 </S.SocialList>
-                <S.Copyright>© 2023 Mihail Ilin, All Rights Reserved.</S.Copyright>
+                <S.Copyright>© 2024 Mihail Ilin</S.Copyright>
             </FlexWrapper>
         </S.StyledFooter>
     );

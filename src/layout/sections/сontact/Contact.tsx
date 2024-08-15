@@ -6,9 +6,9 @@ import {S} from "./Contact_Styles";
 
 export const Contact = () => {
     return (
-        <S.StyledContact>
-            <Container>
-                <SectionTitle>Contact</SectionTitle>
+        <S.StyledContact >
+            <Container >
+                <SectionTitle id={'contact'}>Contact</SectionTitle>
                 <S.StyledForm>
                     <S.StyledInput placeholder={"Name"}/>
                     <S.StyledInput placeholder={"Email"}/>

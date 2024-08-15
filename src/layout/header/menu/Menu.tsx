@@ -1,21 +1,52 @@
 import React from 'react';
 import {S} from "./Menu_Styles";
 
-export const Menu:React.FC<{ itemsMenu: Array<string> }> = (props: { itemsMenu: Array<string> }) => {
+type ItemType={ href:string, title:string }
+
+const itemsMenu:Array<ItemType> = [
+    {
+        title: "Home",
+        href: 'home',
+    },
+    {
+        title: "Works",
+        href: "works",
+    },
+    {
+        title: "Skills",
+        href: "skills",
+    },
+    // {
+    //     title: "Testimony",
+    //     href: "testimony",
+    // },
+    {
+        title: "Contact",
+        href: "contact",
+    }
+
+];
+
+export const Menu:React.FC = () => {
     return (
         <ul>
             {
-                props.itemsMenu.map((item: string, index: number) => {
+                itemsMenu.map((item: ItemType, index: number) => {
                     return <S.ListItem key={index}>
-                        <S.Link href={"#"}>
-                            {item}
+                        <S.LinkMenu
+                            // offset={30}
+                            // activeClass="active"
+                            // spy={true}
+                            smooth={true}
+                            to={item.href}>
+                            {item.title}
                             <S.Mask>
-                                <span>{item}</span>
+                                <span>{item.title}</span>
                             </S.Mask>
                             <S.Mask>
-                                <span>{item}</span>
+                                <span>{item.title}</span>
                             </S.Mask>
-                        </S.Link>
+                        </S.LinkMenu>
                     </S.ListItem>
                 })
             }

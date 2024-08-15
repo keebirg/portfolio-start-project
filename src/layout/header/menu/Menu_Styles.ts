@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
+import {Link} from "react-scroll";
 
+const ListItem = styled.li`
+  position: relative;
+`
 
 const Mask = styled.span`
   position: absolute;
@@ -10,6 +14,7 @@ const Mask = styled.span`
   height: 50%;
   overflow-y: hidden;
   color: ${theme.colors.accent};
+  transition: ${theme.animation.transition};
 
   & + & {
     top: 50%;
@@ -21,8 +26,15 @@ const Mask = styled.span`
   }
 `
 
-const ListItem = styled.li`
-  position: relative;
+
+
+const LinkMenu = styled(Link)`
+  color: ${theme.colors.accent};
+  text-align: center;
+  font-family: Josefin Sans, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+ 
 
   &::before {
     content: "";
@@ -35,9 +47,10 @@ const ListItem = styled.li`
     right: -10px;
     z-index: 1;
     transform: scale(0);
+    transition: ${theme.animation.transition};
   }
 
-  &:hover {
+  &:hover, &.active {
 
     &::before {
       transform: scale(1);
@@ -55,19 +68,10 @@ const ListItem = styled.li`
   }
 `
 
-const Link = styled.a`
-  color: ${theme.colors.accent};
-  text-align: center;
-  font-family: Josefin Sans, sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  color: transparent;
-`
-
 
 
 export const S = {
     ListItem,
     Mask,
-    Link,
+    LinkMenu,
 }

@@ -6,7 +6,7 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {DesktopMenu} from "./desktopMenu/DesktopMenu";
 import {MobileMenu} from "./mobileMenu/MobileMenu";
 
-const itemsMenu = ["Home", "Skills", "Works", "Testimony", "Contact"];
+
 
 export const Header: React.FC = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -16,8 +16,6 @@ export const Header: React.FC = () => {
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)
         window.addEventListener("resize", handleWindowResize);
-
-        // Return a function from the effect that removes the event listener
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
 
@@ -27,9 +25,9 @@ export const Header: React.FC = () => {
             <StyledHeader>
                 <Container>
                     <FlexWrapper justify={"space-between"} align={"center"}>
-                        <Logo/>
-                        {(width > breakpoint) ? <DesktopMenu itemsMenu={itemsMenu}/> :
-                                              <MobileMenu itemsMenu={itemsMenu}/>}
+                        <Logo />
+                        {(width > breakpoint) ? <DesktopMenu /> :
+                                              <MobileMenu />}
                     </FlexWrapper>
                 </Container>
             </StyledHeader>

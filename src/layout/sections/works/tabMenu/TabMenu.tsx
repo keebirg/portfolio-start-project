@@ -1,15 +1,25 @@
 import React from 'react';
 import styled from "styled-components";
-import { Link } from '../../../../components/Link';
+import {Link} from '../../../../components/Link';
+import {TabMenuType, TypeTabMenuType} from "../Works";
 
-export const TabMenu = (props: { itemsMenu: Array<string> }) => {
+type TabMenuPropsType = {
+    tabsMenu: Array<TabMenuType>
+    changeTabsMenu: (value: TypeTabMenuType) => void
+    currentTypeTabMenu: TypeTabMenuType
+}
+
+export const TabMenu = (props: TabMenuPropsType) => {
     return (
         <StyledTabMenu>
             <ul>
                 {
-                    props.itemsMenu.map((item: string, index: number) => {
+                    props.tabsMenu.map((item: TabMenuType, index: number) => {
                         return <ListItem key={index}>
-                            <Link href={"#"}>{item}</Link>
+                            <Link as={'button'}
+                                  active={props.currentTypeTabMenu === item.type}
+                                  onClick={() => props.changeTabsMenu(item.type)}>
+                                {item.title}</Link>
                         </ListItem>
                     })
                 }
@@ -19,7 +29,7 @@ export const TabMenu = (props: { itemsMenu: Array<string> }) => {
 };
 
 const StyledTabMenu = styled.nav`
-  
+
 
   ul {
     display: flex;
@@ -31,7 +41,7 @@ const StyledTabMenu = styled.nav`
 `
 
 const ListItem = styled.li`
-  
+
 `
 
 

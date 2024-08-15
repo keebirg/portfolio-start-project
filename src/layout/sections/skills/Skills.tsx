@@ -8,39 +8,39 @@ import {Container} from "../../../components/Container";
 const SkillData = [
     {
         iconId: "code",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+        text: "",
         title: "html5",
     },
     {
         iconId: "css",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+        text: "",
         title: "css3",
     },
     {
-        iconId: "figma",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
-        title: "WEB DESIgN",
+        iconId: "redux",
+        text: "",
+        title: "REDUX",
     },
     {
         iconId: "react",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+        text: "",
         title: "React",
     },
     {
         iconId: "stComp",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+        text: "",
         title: "styled components",
     },
     {
         iconId: "tsx",
-        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim",
+        text: "",
         title: "typescript",
     }
 ]
 
 export const Skills: React.FC = () => {
     return (
-        <StyledSkills>
+        <StyledSkills id={'skills'}>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
